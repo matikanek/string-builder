@@ -1,0 +1,26 @@
+html {
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+}
+    
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: #333333;
+}
+    
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: white;
+}
+  

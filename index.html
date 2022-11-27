@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pyramid</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">Please press F12 and select console tab</div>
+
+    <script>
+      class StringBuilder {
+        constructor(_arg) {
+          if (_arg) {
+            this.value = _arg;
+          } else {
+            this.value = "";
+          }
+        }
+
+        append(arg) {
+          this.value = this.value.concat(arg);
+          return this;
+        }
+
+        prepend(arg) {
+          this.value = arg.concat(this.value);
+          return this;
+        }
+
+        pad(arg) {
+          this.value = arg + this.value + arg;
+          return this;
+        }
+
+        toString() {
+          return `${this.value}`;
+        }
+      }
+
+      const builder = new StringBuilder(".");
+
+      builder.append("^").prepend("^").pad("=");
+
+      console.log(builder); // '=^.^='
+    </script>
+  </body>
+</html>
